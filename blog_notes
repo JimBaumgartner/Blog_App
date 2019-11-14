@@ -1,0 +1,39 @@
+Blog APP
+
+Makeing and maintaining blog posts, comments on blog posts, 
+and intergrates user authentication.  Data is persistant within 
+a postgres database
+
+Tools:
+Flask
+PostSql
+SQLalchemy
+JWT (token generater) (string)
+
+controllers : will have 3 (Blog Posts, Users, Comments) + 1 for authentication log
+controllers will contain the routes
+
+
+Blog Posts:
+    tittle = string
+    id = int
+    contents  = string
+    created_by = FK for user (foreign key)
+    creation_date = datetime
+    last_modified = datetime
+Users:
+    id = int
+    email = string
+    password = string * will need to hash
+    first_name = string
+    last_name = string
+    date_created = datetime
+    last_modified = datetime
+Comments:
+    id = int
+    created_by = FK for user (foreign key)
+    blog_post = FK for user (foreign key)
+    contents = string
+    date_created = datetime
+    last_modified = datetime
+
